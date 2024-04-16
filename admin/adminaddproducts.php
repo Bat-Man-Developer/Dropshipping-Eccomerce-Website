@@ -33,68 +33,73 @@ include('adminserver/getadminaddproducts.php');
                   <div class="form-group">
                     <label>Product Department
                       <select class="form-select" required name="fldproductdepartment">
-                        <option value="Automotive & DIY">Automotive & DIY</option>
-                        <option value="Baby & Toddler">Baby & Toddler</option>
-                        <option value="Beauty">Beauty</option>
-                        <option value="Camping & Outdoor" >Camping & Outdoor</option>
+                        <option value="">no selction...</option>
+                        <option value="Automotive">Automotive</option>
+                        <option value="DIY">DIY</option>
+                        <option value="Baby, Toddler & Kids">Baby, Toddler & Kids</option>
+                        <option value="Health, Beauty & Personal Care">Health, Beauty & Personal Care</option>
+                        <option value="Sports" >Sports</option>
+                        <option value="Outdoors">Outdoors</option>
+                        <option value="Healthy Living">Healthy Living</option>
                         <option value="Clothing, Shoes & Accessories">Clothing, Shoes & Accessories</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Gaming & Media">Gaming & Media</option>
+                        <option value="Electronics & Devices">Electronics & Devices</option>
                         <option value="Garden, Pool & Patio">Garden, Pool & Patio</option>
-                        <option value="Groceries & Household">Groceries & Household</option>
-                        <option value="Health & Personal Care">Health & Personal Care</option>
                         <option value="Home & Appliances">Home & Appliances</option>
-                        <option value="Liquor">Liquor</option>
-                        <option value="Office & Stationery">Office & Stationery</option>
+                        <option value="Home & Furniture">Home & Furniture</option>
+                        <option value="Household Essentials">Household Essentials</option>
+                        <option value="Office, Stationary & Books">Office, Stationary & Books</option>
+                        <option value="Party Ocassions">Party Ocassions</option>
                         <option value="Pets">Pets</option>
-                        <option value="Sports & Training">Sports & Training</option>
-                        <option value="Toys">Toys</option>
+                        <option value="Liquor">Liquor</option>
+                        <option value="Sweets & Snacks">Sweets & Snacks</option>
                       </select>
                     </label>
                   </div>
                   <div class="form-group">
+                    <label>Product Category
+                      <input type="text" class="form-control" name="fldproductcategory" placeholder="Product Category" required/>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <p id="form-optional">[optional]</p>
                     <label>Product Type
-                      <select class="form-select" required name="fldproducttype">
-                        <option value="Automotive">Automotive</option>
-                        <option value="DIY">DIY</option>
-                        <option value="Baby">Baby</option>
-                        <option value="Toddler">Toddler</option>
-                        <option value="Beauty">Beauty</option>
-                        <option value="Camping">Camping</option>
-                        <option value="Outdoor">Outdoor</option>
-                        <option value="Clothing">Clothing</option>
-                        <option value="Shoes">Shoes</option>
-                        <option value="Accessories">Accessories</option>
-                        <option value="Electronics">Watch</option>
-                        <option value="Electronics">Phone</option>
-                        <option value="Electronics">Laptop</option>
-                        <option value="Electronics">Computer</option>
-                        <option value="Electronics">TV</option>
-                        <option value="Electronics">Speaker</option>
-                        <option value="Gaming">Gaming</option>
-                        <option value="Media">Media</option>
-                        <option value="Garden">Garden</option>
-                        <option value="Pool">Pool</option>
-                        <option value="Patio">Patio</option>
-                        <option value="Groceries">Groceries</option>
-                        <option value="Household">Household</option>
-                        <option value="Health">Health</option>
-                        <option value="Personal Care">Personal Care</option>
-                        <option value="Home">Home</option>
-                        <option value="Appliances">Appliances</option>
-                        <option value="Liquor">Liquor</option>
-                        <option value="Office">Office</option>
-                        <option value="Stationery">Stationery</option>
-                        <option value="Pets">Pets</option>
-                        <option value="Sports">Sports</option>
-                        <option value="Training">Training</option>
-                        <option value="Toys">Toys</option>
+                      <input type="text" class="form-control" name="fldproducttype" placeholder="Product Type"/>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <p id="form-optional">[optional]</p>
+                    <label>Product Color
+                      <input type="text" class="form-control" name="fldproductcolor" placeholder="Product Color"/>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <p id="form-optional">[optional]</p>
+                    <label>Product Gender
+                      <select class="form-select" required name="fldproductgender">
+                        <option value="">no selction...</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <p id="form-optional">[optional]</p>
+                    <label>Product Size
+                      <select class="form-select" required name="fldproductsize">
+                        <option value="">no selction...</option>
+                        <option value="Male">X-Small</option>
+                        <option value="Male">Small</option>
+                        <option value="Female">Medium</option>
+                        <option value="Other">Large</option>
+                        <option value="Male">X-Large</option>
                       </select>
                     </label>
                   </div>
                   <div class="form-group">
                     <label>Product Stock
                       <select class="form-select" required name="fldproductstock">
+                        <option value="">no selction...</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -170,12 +175,19 @@ include('adminserver/getadminaddproducts.php');
                   </div>
                   <div class="form-group">
                     <label>Product Price
-                      <input type="text" class="form-control" name="fldproductprice" placeholder="Product Price" required/>
+                      <input type="number" class="form-control" name="fldproductprice" placeholder="Product Price" required/>
                     </label>
                   </div>
                   <div class="form-group">
+                    <p id="form-optional">[optional]</p>
                     <label>Product Discount
-                      <input type="text" class="form-control" name="fldproductspecialoffer" placeholder="Product Discount" required/>
+                      <input type="number" class="form-control" name="fldproductdiscount" placeholder="Product Discount"/>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <p id="form-optional">[optional]</p>
+                    <label>Product Discount Code
+                      <input type="number" class="form-control" name="fldproductdiscountcode" placeholder="Product Discount Code"/>
                     </label>
                   </div>
                   <div class="form-group">

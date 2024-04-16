@@ -27,9 +27,12 @@ include('adminserver/getadminlogout.php');
                     <th scope="col">Product Id</th>
                     <th scope="col">Product Image</th>
                     <th scope="col">Product Name</th>
-                    <th scope="col">Product Price</th>
-                    <th scope="col">Product Offer</th>
+                    <th scope="col">Product Department</th>
+                    <th scope="col">Product Category</th>
                     <th scope="col">Product Type</th>
+                    <th scope="col">Product Stock</th>
+                    <th scope="col">Product Price</th>
+                    <th scope="col">Product Discount</th>
                     <th scope="col">Edit Images</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
@@ -42,10 +45,12 @@ include('adminserver/getadminlogout.php');
                     <td><?php echo $product['fldproductid']; ?></td>
                     <td><img src="<?php echo "../../assets/images/". $product['fldproductimage']; ?>"></td>
                     <td><?php echo $product['fldproductname']; ?></td>
-                    <td><?php echo $product['fldproductprice']; ?></td>
-                    <td><?php echo $product['fldproductspecialoffer']; ?>%</td>
+                    <td><?php echo $product['fldproductdepartment']; ?></td>
+                    <td><?php echo $product['fldproductcategory']; ?></td>
                     <td><?php echo $product['fldproducttype']; ?></td>
-
+                    <td><?php echo $product['fldproductstock']; ?></td>
+                    <td><?php echo $product['fldproductprice']; ?></td>
+                    <td><?php echo $product['fldproductdiscount']; ?>%</td>
                     <td><a class="btn btn-primary" href="<?php echo "admineditimages.php?fldproductid=".$product['fldproductid']."&fldproductname=".$product['fldproductname'];?>">Edit Images</a></td>
 
                     <td><a class="btn btn-primary" href="admineditproducts.php?fldproductid=<?php echo $product['fldproductid']; ?>">Edit</a></td>

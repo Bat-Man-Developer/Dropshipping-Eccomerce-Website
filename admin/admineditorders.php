@@ -37,16 +37,10 @@ include('adminserver/getadmineditorders.php');
                   <p><?php echo $order['fldorderid']; ?></p>
                   <p>R<?php echo $order['fldordercost']; ?></p>
                   <p><?php echo $order['fldorderstatus']; ?></p>
-                  <p><?php echo $order['fldshippingphonenumber']; ?></p>
                   <p><?php echo $order['fldshippingaddressline1']; ?></p>
                 </div>
                 <form id="admineditordersform" method="POST" action="admineditorders.php" style="text-align: center;">
                   <p style="color: red;"><?php if(isset($_GET['error'])){ echo $_GET['error'];} ?></p>
-                  <div class="form-group">
-                    <label>Order Cost
-                      <input type="text" class="form-control" name="fldordercost" value="<?php echo $order['fldordercost']; ?>" required/>
-                    </label>
-                  </div>
                   <div class="form-group">
                     <label>Order Status
                       <select class="form-select" required name="fldorderstatus">
@@ -55,16 +49,6 @@ include('adminserver/getadmineditorders.php');
                         <option value="Shipped" <?php if($order['fldorderstatus'] == "Shipped"){ echo "selected";}?>>Shipped</option>
                         <option value="Delivered" <?php if($order['fldorderstatus'] == "Delivered"){ echo "selected";}?>>Delivered</option>
                       </select>
-                    </label>
-                  </div>
-                  <div class="form-group">
-                    <label>Billing Phone Number
-                      <input type="text" class="form-control" name="fldbillingphonenumber" value="<?php echo $order['fldbillingphonenumber']; ?>" required/>
-                    </label>
-                  </div>
-                  <div class="form-group">
-                    <label>Shipping Phone Number
-                      <input type="text" class="form-control" name="fldshippingphonenumber" value="<?php echo $order['fldshippingphonenumber']; ?>" required/>
                     </label>
                   </div>
                   <div class="form-group">

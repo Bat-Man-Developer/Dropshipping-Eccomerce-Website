@@ -45,8 +45,7 @@ function calculatetotalcart(){
     $totalquantity = $totalquantity + $quantity; 
 
   }
-
+  //Store Information in Session
   $_SESSION['total'] = $totalprice;
   $_SESSION['totalquantity'] = $totalquantity;
 }
-?>

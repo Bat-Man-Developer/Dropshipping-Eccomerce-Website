@@ -71,6 +71,3 @@ if(isset($_SESSION['logged_in'])){
     header('location: ../index.php?error=Something Went Wrong. Contact Support Team!!');
   }
 }
-
-
-?>

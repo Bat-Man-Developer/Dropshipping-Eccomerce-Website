@@ -146,4 +146,3 @@ else if(isset($_POST['flduserid'])){
     header('location: account.php?errormessage=Something Went Wrong. Contact Support Team!!');
   }
 }
-?>

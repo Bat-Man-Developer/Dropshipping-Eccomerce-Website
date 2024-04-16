@@ -10,4 +10,3 @@ if($stmt->execute()){
 else{
   header('location: ../index.php?error=Something Went Wrong. Contact Support Team.');
 }
-?>

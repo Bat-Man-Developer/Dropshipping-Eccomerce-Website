@@ -49,4 +49,3 @@ if(isset($_POST['productreviewbtn'])){//If Product Review Button Is Clicked
     header('location: productreviewslogin.php?error=Sign Up or Login To Review Products');
   }
 }
-?>

@@ -1,10 +1,9 @@
 <?php
-
 // Function to process user input and generate bot response
 function getBotResponse($input) {
     // Bot's responses based on user input
     $responses = array(
-        "hello" => "Hello! How can I assist you today?",
+        "hello" => "1. returns 2. Delivery delays",
         "how are you" => "I'm a bot. I don't have feelings, but thanks for asking!",
         "programming" => "I love programming! What language are you working with?",
         "php" => "Great choice! PHP is a versatile language for web development.",
@@ -27,5 +26,3 @@ if (isset($_POST['userInput'])) {
     $botResponse = getBotResponse($userInput);
     echo $botResponse;
 }
-
-?>

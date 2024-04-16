@@ -106,7 +106,6 @@ if(isset($_POST['buynowbtn'])){
 
   //2.1 calculate total
   calculatetotalcart();
-
   header('location: ../cart.php?editmessage=Added To Cart Succesfully!');
 }
 else if(isset($_POST['addtocartbtn'])){//If Add To Cart Button Is Clicked

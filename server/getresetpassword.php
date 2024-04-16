@@ -42,4 +42,3 @@ if(isset($_POST['resetpasswordbtn'])){
     }
   }
 }
-?>

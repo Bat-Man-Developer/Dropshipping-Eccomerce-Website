@@ -9,4 +9,3 @@ if(isset($_POST['submitcontactformbtn'])){
   mail("kkay.mudau008@gmail.com", $subject, $message, $from);
   header('location: ../contact.php?message=Email Sent Succesfully. Customer Support Team Will Respond As Soon As Possible.');
 }
-?>

@@ -45,4 +45,3 @@ if(isset($_POST['testimonialsloginbtn'])){
     header('location: ../testimonialslogin.php?error=Could Not Login At The Moment');
   }
 }
-?>

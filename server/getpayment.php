@@ -79,4 +79,3 @@ if(isset($_GET['fldtransactionid'])){
     header('location: ../cart.php?error=Something Went Wrong!! Contact Support Team. No Order Id Detected 404');
   }
 }
-?>

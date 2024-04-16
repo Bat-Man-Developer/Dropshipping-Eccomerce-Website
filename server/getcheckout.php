@@ -99,7 +99,7 @@ if(isset($_POST['checkoutbtn'])){
 			$stmt3->bind_param('issssssssss',$orderid,$shippingfirstname,$shippinglastname,$shippingaddressline1,$shippingaddressline2,$shippingpostalcode,$shippingcity,$shippingcountry,$shippingemail,$shippingphonenumber,$shippingdeliverycomment); 
 
 			//1.4.1 Insert in Orders Table
-			$stmt4 = $conn->prepare("INSERT INTO orders (fldordercost,fldcouriercost,flddiscountcode,fldorderstatus,flduserid,fldshippingid,fldbillingidnumber,fldbillingphonenumber,fldshippingphonenumber,fldshippingcity,fldshippingcountry,fldshippingaddressline1,fldshippingaddressline2,fldorderdate,fldshippingdeliverycomment)
+			$stmt4 = $conn->prepare("INSERT INTO orders (fldordercost,fldcouriercost,fldproductdiscountcode,fldorderstatus,flduserid,fldshippingid,fldbillingidnumber,fldbillingphonenumber,fldshippingphonenumber,fldshippingcity,fldshippingcountry,fldshippingaddressline1,fldshippingaddressline2,fldorderdate,fldshippingdeliverycomment)
 			VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			$stmt4->bind_param('iissiisssssssss',$ordercost,$couriercost,$discountcode,$orderstatus,$userid,$shippingid,$billingidnumber,$billingphonenumber,$shippingphonenumber,$shippingcity,$shippingcountry,$shippingaddressline1,$shippingaddressline2,$orderdate,$shippingdeliverycomment);
 
@@ -190,7 +190,7 @@ if(isset($_POST['checkoutbtn'])){
 			$stmt3->bind_param('ssss',$testimonialsimage,$testimonialsfirstname,$testimonialslastname,$testimonialsemail);
 
 			//1.5.1 Insert In Orders Table
-			$stmt4 = $conn->prepare("INSERT INTO orders (fldordercost,fldcouriercost,flddiscountcode,fldorderstatus,flduserid,fldshippingid,fldbillingidnumber,fldbillingphonenumber,fldshippingphonenumber,fldshippingcity,fldshippingcountry,fldshippingaddressline1,fldshippingaddressline2,fldorderdate,fldshippingdeliverycomment)
+			$stmt4 = $conn->prepare("INSERT INTO orders (fldordercost,fldcouriercost,fldproductdiscountcode,fldorderstatus,flduserid,fldshippingid,fldbillingidnumber,fldbillingphonenumber,fldshippingphonenumber,fldshippingcity,fldshippingcountry,fldshippingaddressline1,fldshippingaddressline2,fldorderdate,fldshippingdeliverycomment)
 			VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			$stmt4->bind_param('iissiisssssssss',$ordercost,$couriercost,$discountcode,$orderstatus,$userid,$shippingid,$billingidnumber,$billingphonenumber,$shippingphonenumber,$shippingcity,$shippingcountry,$shippingaddressline1,$shippingaddressline2,$orderdate,$shippingdeliverycomment);
 
@@ -278,4 +278,3 @@ if(isset($_POST['checkoutbtn'])){
 		header('location: ../cart.php?error=Something Went Wrong, Try Again.');
 	}
 }
-?>

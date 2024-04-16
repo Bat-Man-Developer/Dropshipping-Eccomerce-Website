@@ -101,5 +101,3 @@ if(isset($_POST['registrationbtn'])){
     }
   }
 }
-
-?>

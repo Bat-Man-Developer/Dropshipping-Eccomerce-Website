@@ -6,4 +6,3 @@ $stmt->bind_param('i',$productid);
 if($stmt->execute()){
   $offerproducts = $stmt->get_result();// This is an array
 }
-?>

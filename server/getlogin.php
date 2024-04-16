@@ -42,4 +42,3 @@ if(isset($_POST['loginbtn'])){
     header('location: ../login.php?error=Could Not Login At The Moment');
   }
 }
-?>

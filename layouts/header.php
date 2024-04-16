@@ -39,43 +39,51 @@ session_start();
 					<a href="login.php" style="margin-right: 3%;"><img id="accountpic" class="accountpic" src="assets/images/accounticon_pic.png" alt="Snow" width="30px" height="30px" align="left"></a>
 					<!---------------Cart Image---------------->
 					<a href="cart.php"><img id="cart-pic" class="cartpic" src="assets/images/cartpic.png" alt="Snow" width="30px" height="30px" align="left">
-
 					<?php if(isset($_SESSION['totalquantity']) && $_SESSION['totalquantity'] != 0) { ?>
-							
 						<span class="cartquantity"><?php echo $_SESSION['totalquantity']; ?></span>
-						
-					<?php }?></a>
+					<?php } ?></a>
 
 					<!-- Menu icon -->
 					<img src="assets/images/menu.png" alt="Snow" class="menu-icon" onclick="menutoggle()" align="center">
 				</div>
 
+				<!-------- Departments Navbar ------->
 				<div class="departmentsnavbar" id="departmentsnavbar">
 					<nav class="departmentsnav">
 						<ul class="departmentsnavitems">
 						  <li class="departmentsactive" onclick="closeallmenutoggle()"><a id="departmentsexitmenutogglebtn" href="#">Close</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductsdepartments=Automotive"><img id="navbaricons" src="" alt="Snow">Automotive</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductsdepartments=DIY"><img id="navbaricons" src="" alt="Snow">DIY</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Baby, Toddler & Kids</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Health, Beauty & Personal Care</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Sports</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Outdoors</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Healthy Living</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Clothing, Shoes & Accessories</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Electronics & Devices</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Garden, Pool & Patio</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Home & Appliances</a></li><li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Home & Furniture</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Household Essentials</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Office, Stationary & Books</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Party Ocassions</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Pets</a></li>
-							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?flddepartments="><img id="navbaricons" src="" alt="Snow">Liquor</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Automotive"><img id="navbaricons" src="assets/images/" alt="Snow">Automotive</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=DIY"><img id="navbaricons" src="assets/images/" alt="Snow">DIY</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Baby, Toddler & Kids"><img id="navbaricons" src="assets/images/" alt="Snow">Baby, Toddler & Kids</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Health, Beauty & Personal Care"><img id="navbaricons" src="assets/images/" alt="Snow">Health, Beauty & Personal Care</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Sports"><img id="navbaricons" src="assets/images/" alt="Snow">Sports</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Outdoors"><img id="navbaricons" src="assets/images/" alt="Snow">Outdoors</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Healthy Living"><img id="navbaricons" src="assets/images/" alt="Snow">Healthy Living</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Clothing, Shoes & Accessories"><img id="navbaricons" src="assets/images/" alt="Snow">Clothing, Shoes & Accessories</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Electronics & Devices"><img id="navbaricons" src="assets/images/" alt="Snow">Electronics & Devices</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Garden, Pool & Patio"><img id="navbaricons" src="assets/images/" alt="Snow">Garden, Pool & Patio</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Home & Appliances"><img id="navbaricons" src="assets/images/" alt="Snow">Home & Appliances</a></li><li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Home & Furniture"><img id="navbaricons" src="assets/images/" alt="Snow">Home & Furniture</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Household Essentials"><img id="navbaricons" src="assets/images/" alt="Snow">Household Essentials</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Office, Stationary & Books"><img id="navbaricons" src="assets/images/" alt="Snow">Office, Stationary & Books</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Party Ocassions"><img id="navbaricons" src="assets/images/" alt="Snow">Party Ocassions</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Pets"><img id="navbaricons" src="assets/images/" alt="Snow">Pets</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Liquor"><img id="navbaricons" src="assets/images/" alt="Snow">Liquor</a></li>
+							<li class="departmentsactive" id="departmentsnavlist"><a href="products.php?fldproductdepartment=Sweets & Snacks"><img id="navbaricons" src="assets/images/" alt="Snow">Sweets & Snacks</a></li>
 						</ul>
 					</nav>
 				</div>
 
-				<!---- Js for toggle menu ----->
-				<script src="js/getheadertogglemenu.js"></script>
+				<!---- Voice Recognition AI Search --->
+				<div class="voicerecognitioncontainer">
+          <img src="assets/images/voicerecognitionicon_pic.png" class="btn" id="voicerecognitionbtn"/>
+					<p id="result"></p>
+					<p id="voicerecognitionhelplink">Need Help?<a href="voicerecognitionhelp.php">Voice Command List</a><p>
+        </div>
 
-				<!------ Js for Voice Recognition Input ----->
-				<script src="js/getvoicerecognition.js"></script>
+				<!------ Js for Voice Recognition Output ----->
+				<script src="js/getvoicerecognitionoutput.js"></script>
+
+				<!------ Js for Toggle Menu ----->
+				<script src="js/getheadertogglemenu.js"></script>
+			</div>
+		</div>

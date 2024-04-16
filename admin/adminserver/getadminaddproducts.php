@@ -5,11 +5,16 @@ if(isset($_POST['adminaddproductsbtn'])){
   $productid = $_POST['fldproductid'];
   $productname = $_POST['fldproductname'];
   $productdepartment = $_POST['fldproductdepartment'];
+  $productcategory = $_POST['fldproductcategory'];
   $producttype = $_POST['fldproducttype'];
+  $productcolor = $_POST['fldproductcolor'];
+  $productgender = $_POST['fldproductgender'];
+  $productsize = $_POST['fldproductsize'];
   $productstock = $_POST['fldproductstock'];
   $productdescription = $_POST['fldproductdescription'];
   $productprice = $_POST['fldproductprice'];
-  $productoffer = $_POST['fldproductspecialoffer'];
+  $productdiscount = $_POST['fldproductdiscount'];
+  $productdiscountcode = $_POST['fldproductdiscountcode'];
 
   //The Image File
   $target_dir = $_SERVER['DOCUMENT_ROOT']."/assets/images/";
@@ -198,9 +203,9 @@ if(isset($_POST['adminaddproductsbtn'])){
   }
 
   //1. insert in Products Table
-  $stmt = $conn->prepare("INSERT INTO products (fldproductname,fldproductdepartment,fldproducttype,fldproductstock,fldproductdescription,fldproductimage,fldproductimage1,fldproductimage2,fldproductimage3,fldproductimage4,fldproductimage5,fldproductimage6,fldproductprice,fldproductspecialoffer)
-  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-  $stmt->bind_param('ssssssssssssss',$productname,$productdepartment,$producttype,$productstock,$productdescription,$productimagename,$productimagename1,$productimagename2,$productimagename3,$productimagename4,$productimagename5,$productimagename6,$productprice,$productoffer); 
+  $stmt = $conn->prepare("INSERT INTO products (fldproductname,fldproductdepartment,fldproductcategory,fldproducttype,fldproductcolor,fldproductgender,fldproductsize,fldproductstock,fldproductdescription,fldproductimage,fldproductimage1,fldproductimage2,fldproductimage3,fldproductimage4,fldproductimage5,fldproductimage6,fldproductprice,fldproductdiscount,fldproductdiscountcode)
+  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+  $stmt->bind_param('sssssssssssssssssss',$productname,$productdepartment,$productcategory,$producttype,$productcolor,$productgender,$productsize,$productstock,$productdescription,$productimagename,$productimagename1,$productimagename2,$productimagename3,$productimagename4,$productimagename5,$productimagename6,$productprice,$productdiscount,$productdiscountcode); 
   //1.2 Issue New Product ID & store Product info in Database
   $_SESSION['fldproductid'] = $productid = $stmt->insert_id;
   

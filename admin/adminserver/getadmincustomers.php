@@ -29,4 +29,3 @@
   $stmt1 = $conn->prepare("SELECT * FROM users LIMIT $offset,$totalrecordsperpage");
   $stmt1->execute();
   $customers = $stmt1->get_result();// This is an array
-?>

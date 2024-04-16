@@ -2,7 +2,7 @@
 include('adminconnection.php');
 //Edit Product Details
 if(isset($_POST['admineditimagesbtn'])){
-  //The Image Files
+  //The Image File
   $target_dir = $_SERVER['DOCUMENT_ROOT']."/assets/images/";
   $productimage = basename($_FILES["fldproductimage"]["name"]);
   $productimage1 = basename($_FILES["fldproductimage1"]["name"]);
@@ -75,13 +75,13 @@ if(isset($_POST['admineditimagesbtn'])){
   }
   else if($imageFileType == "jpg" && $imageFileType1 == "jpg" && $imageFileType2 == "jpg" && $imageFileType3 == "jpg" && $imageFileType4 == "jpg" && $imageFileType5 == "jpg" && $imageFileType6 == "jpg"){
     //Image Names
-    $productimagename = $productname.".jpg";
-    $productimagename1 = $productname." 1.jpg";
-    $productimagename2 = $productname." 2.jpg";
-    $productimagename3 = $productname." 3.jpg";
-    $productimagename4 = $productname." 4.jpg";
-    $productimagename5 = $productname." 5.jpg";
-    $productimagename6 = $productname." 6.jpg";
+    $productimagename = $productname.uniqid().".jpg";
+    $productimagename1 = $productname.uniqid()." 1.jpg";
+    $productimagename2 = $productname.uniqid()." 2.jpg";
+    $productimagename3 = $productname.uniqid()." 3.jpg";
+    $productimagename4 = $productname.uniqid()." 4.jpg";
+    $productimagename5 = $productname.uniqid()." 5.jpg";
+    $productimagename6 = $productname.uniqid()." 6.jpg";
     $target_file = $target_dir.$productimagename;
     $target_file1 = $target_dir.$productimagename1;
     $target_file2 = $target_dir.$productimagename2;
@@ -91,13 +91,13 @@ if(isset($_POST['admineditimagesbtn'])){
     $target_file6 = $target_dir.$productimagename6;
   }
   else if($imageFileType == "jpeg" && $imageFileType1 == "jpeg" && $imageFileType2 == "jpeg" && $imageFileType3 == "jpeg" && $imageFileType4 == "jpeg" && $imageFileType5 == "jpeg" && $imageFileType6 == "jpeg"){
-    $productimagename = $productname.".jpeg";
-    $productimagename1 = $productname." 1.jpeg";
-    $productimagename2 = $productname." 2.jpeg";
-    $productimagename3 = $productname." 3.jpeg";
-    $productimagename4 = $productname." 4.jpeg";
-    $productimagename5 = $productname." 5.jpeg";
-    $productimagename6 = $productname." 6.jpeg";
+    $productimagename = $productname.uniqid().".jpeg";
+    $productimagename1 = $productname.uniqid()." 1.jpeg";
+    $productimagename2 = $productname.uniqid()." 2.jpeg";
+    $productimagename3 = $productname.uniqid()." 3.jpeg";
+    $productimagename4 = $productname.uniqid()." 4.jpeg";
+    $productimagename5 = $productname.uniqid()." 5.jpeg";
+    $productimagename6 = $productname.uniqid()." 6.jpeg";
     $target_file = $target_dir.$productimagename;
     $target_file1 = $target_dir.$productimagename1;
     $target_file2 = $target_dir.$productimagename2;
@@ -107,13 +107,13 @@ if(isset($_POST['admineditimagesbtn'])){
     $target_file6 = $target_dir.$productimagename6;
   }
   else if($imageFileType == "png" && $imageFileType1 == "png" && $imageFileType2 == "png" && $imageFileType3 == "png" && $imageFileType4 == "png" && $imageFileType5 == "png" && $imageFileType6 == "png"){
-    $productimagename = $productname.".png";
-    $productimagename1 = $productname." 1.png";
-    $productimagename2 = $productname." 2.png";
-    $productimagename3 = $productname." 3.png";
-    $productimagename4 = $productname." 4.png";
-    $productimagename5 = $productname." 5.png";
-    $productimagename6 = $productname." 6.png";
+    $productimagename = $productname.uniqid().".png";
+    $productimagename1 = $productname.uniqid()." 1.png";
+    $productimagename2 = $productname.uniqid()." 2.png";
+    $productimagename3 = $productname.uniqid()." 3.png";
+    $productimagename4 = $productname.uniqid()." 4.png";
+    $productimagename5 = $productname.uniqid()." 5.png";
+    $productimagename6 = $productname.uniqid()." 6.png";
     $target_file = $target_dir.$productimagename;
     $target_file1 = $target_dir.$productimagename1;
     $target_file2 = $target_dir.$productimagename2;
@@ -123,13 +123,13 @@ if(isset($_POST['admineditimagesbtn'])){
     $target_file6 = $target_dir.$productimagename6;
   }
   else if($imageFileType == "gif" && $imageFileType1 == "gif" && $imageFileType2 == "gif" && $imageFileType3 == "gif" && $imageFileType4 == "gif" && $imageFileType5 == "gif" && $imageFileType6 == "gif"){
-    $productimagename = $productname.".gif";
-    $productimagename1 = $productname." 1.gif";
-    $productimagename2 = $productname." 2.gif";
-    $productimagename3 = $productname." 3.gif";
-    $productimagename4 = $productname." 4.gif";
-    $productimagename5 = $productname." 5.gif";
-    $productimagename6 = $productname." 6.gif";
+    $productimagename = $productname.uniqid().".gif";
+    $productimagename1 = $productname.uniqid()." 1.gif";
+    $productimagename2 = $productname.uniqid()." 2.gif";
+    $productimagename3 = $productname.uniqid()." 3.gif";
+    $productimagename4 = $productname.uniqid()." 4.gif";
+    $productimagename5 = $productname.uniqid()." 5.gif";
+    $productimagename6 = $productname.uniqid()." 6.gif";
     $target_file = $target_dir.$productimagename;
     $target_file1 = $target_dir.$productimagename1;
     $target_file2 = $target_dir.$productimagename2;
@@ -140,14 +140,14 @@ if(isset($_POST['admineditimagesbtn'])){
   }
 
   // Check if file already exists
-  if(file_exists($target_file)){
+  if(file_exists($target_file || $target_file1 || $target_file2 || $target_file3 || $target_file4 || $target_file5 || $target_file6)){
     $uploadOk = 0;
     header('location: ../admin/admineditimages.php?editmessage=Error Occured, File Already Exists.');
   }
   
   // Check if $uploadOk is set to 0 by an error
   if($uploadOk == 0){
-    header('location: ../admin/admineditimages.php?errormessage=Unexpected Error, Try Again.');
+    header('location: ../admin/admineditimages.php?errormessage=Unexpected Error, Please Try Again.');
   }
   else{// if everything is ok, try to Upload File
     if(move_uploaded_file($_FILES["fldproductimage"]["tmp_name"], $target_file)){

@@ -11,17 +11,14 @@ if(isset($_GET['fldorderid'])){
 }
 else if($_POST['admineditordersbtn']){//Edit Product Details
   $orderid = $_POST['fldorderid'];
-  $ordercost = $_POST['fldordercost'];
   $orderstatus = $_POST['fldorderstatus'];
-  $billingphonenumber = $_POST['fldbillingphonenumber'];
-  $shippingphonenumber = $_POST['fldshippingphonenumber'];
   $shippingaddressline1 = $_POST['fldshippingaddressline1'];
   $shippingcity = $_POST['fldshippingcity'];
   $shippingcountry = $_POST['fldshippingcountry'];
 
-  $stmt = $conn->prepare("UPDATE orders SET fldordercost=?, fldorderstatus=?, fldbillingphonenumber=?, fldshippingphonenumber=?, fldshippingaddressline1=?, fldshippingcity=?, fldshippingcountry=? WHERE fldorderid=?");
+  $stmt = $conn->prepare("UPDATE orders SET fldorderstatus=?, fldshippingphonenumber=?, fldshippingaddressline1=?, fldshippingcity=?, fldshippingcountry=? WHERE fldorderid=?");
 
-  $stmt->bind_param('sssssssi',$ordercost,$orderstatus,$billingphonenumber,$shippingphonenumber,$shippingaddressline1,$shippingcity,$shippingcountry,$orderid);
+  $stmt->bind_param('sssssi',$orderstatus,$shippingphonenumber,$shippingaddressline1,$shippingcity,$shippingcountry,$orderid);
   
   if($stmt->execute()){
     header('location: ../admin/adminorders.php?editmessage=Order Updated Succesfully!');
@@ -33,5 +30,3 @@ else if($_POST['admineditordersbtn']){//Edit Product Details
 else{//no product id was given
   header('admin/dashboard.php?errormessage=Something went wrong!');
 }
-
-?>

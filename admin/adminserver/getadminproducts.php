@@ -29,4 +29,3 @@
   $stmt1 = $conn->prepare("SELECT * FROM products LIMIT $offset,$totalrecordsperpage");
   $stmt1->execute();
   $products = $stmt1->get_result();// This is an array
-?>

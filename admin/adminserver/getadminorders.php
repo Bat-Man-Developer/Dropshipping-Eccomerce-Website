@@ -29,4 +29,3 @@ include('adminconnection.php');
   $stmt1 = $conn->prepare("SELECT * FROM orders LIMIT $offset,$totalrecordsperpage");
   $stmt1->execute();
   $orders = $stmt1->get_result();// This is an array
-?>

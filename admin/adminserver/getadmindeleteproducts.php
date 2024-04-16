@@ -1,7 +1,5 @@
 <?php
-
 include('adminconnection.php');
-
 if(isset($_POST['admindeleteproductsbtn'])){
   $productid = $_POST['fldproductid'];
   $stmt = $conn->prepare("DELETE FROM products WHERE fldproductid = ?");
@@ -27,5 +25,3 @@ else if(isset($_GET['fldproductid'])){
 else{//no product id was given
   header('admin/dashboard.php?errormessage=Something went wrong!');
 }
-
-?>

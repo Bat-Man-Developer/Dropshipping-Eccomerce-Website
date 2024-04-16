@@ -29,4 +29,3 @@ if(isset($_POST['adminloginbtn'])){
     header('location: ../admin/adminlogin.php?error=Could Not Login At The Moment');
   }
 }
-?>

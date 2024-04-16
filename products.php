@@ -1,9 +1,6 @@
 <?php
 include('layouts/header.php');
 ?>
-  </div>
-</div>
-
 <section>
 	<div class="filterdropdown">
 		<label>Filter

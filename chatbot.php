@@ -1,6 +1,5 @@
 <?php
 include('layouts/header.php');
-include('server/getcontact.php');
 ?>
   </div>
 </div>
@@ -13,7 +12,7 @@ include('server/getcontact.php');
   <h1>Chatbot</h1>
   <div id="chat-container">
       <div id="chat-log"></div>
-      <input type="text" id="user-input" placeholder="Type your message..." autofocus />
+      <input type="text" id="user-input" placeholder="Type hello for menu..." autofocus />
       <button id="send-btn">Send</button>
   </div>
 

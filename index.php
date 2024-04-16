@@ -1,8 +1,6 @@
 <?php
 include('layouts/header.php');
 ?>
-  </div>
-</div>
 <!------------- Website Messages----------->
 <p style="color: red; font-weight: bold; text-align: center" class="text-center"><?php if(isset($_GET['error'])){ echo $_GET['error']; }?></p>
 <p style="color: green" class="text-center"><?php if(isset($_GET['message'])){ echo $_GET['message']; }?></p>
@@ -11,23 +9,14 @@ include('layouts/header.php');
 	<div class="container">
 		<div class="row">
 		<!-- Below Header Intro or Banner --> 
-
 			<div class="col-2">
 				<h2>New Gen AI Shopping!</h2>
 				<p>Shop with us and find everything you need.</p>
 				<a href="products.php" class="btn">Explore Now &#8594;</a>
-				<!---- Voice Recognition Image --->
-				<div class="voicerecognitioncontainer">
-          <img src="assets/images/voicerecognitionicon_pic.png" class="btn" id="voicerecognitionbtn"/>
-					<p id="result"></p>
-					<p id="voicerecognitionhelplink">Need Help?<a href="voicerecognitionhelp.php">Voice Command List</a><p>
-        </div>
-
-				<!------ Js for Voice Recognition Output---->
-				<script src="js/getvoicerecognitionoutput.js"></script>
 			</div>
 			<div class="col-2">
-			</div>	
+				<!------ Welcome Image -------->
+			</div>
 	  </div>
 	</div>
 </div>
@@ -66,7 +55,7 @@ include('layouts/header.php');
 				<i class="fa fa-star-o"></i>
 				<i class="fa fa-star-o"></i>
 			</div>
-			<p><?php echo $row['fldproductprice']; ?></p>
+			<p>R <?php echo $row['fldproductprice']; ?></p>
 			</a>
 		</div>
 		<?php } ?>
@@ -90,7 +79,7 @@ include('layouts/header.php');
 				<i class="fa fa-star-o"></i>
 				<i class="fa fa-star-o"></i>
 			</div>
-			<p><?php echo $row['fldproductprice']; ?></p>
+			<p>R <?php echo $row['fldproductprice']; ?></p>
 			</a>
 		</div>
 		<?php } ?>

@@ -40,6 +40,11 @@
 		max-width: 50%;
 	}
 
+	#form-optional{
+		font-size: xx-small;
+		color: #4b76eb;
+	}
+
 /*-------Admin-Header-page-------*/
 	.sidenav { 
 		margin-top: 5px;
@@ -553,7 +558,7 @@
 
 /*----------Admin Products Page--------*/
 	.adminproductstable{
-		font-size: 24px;
+		font-size: 20px;
 	}
 
 /*----------Admin Edit Products Page--------*/
@@ -651,7 +656,7 @@
 
 /*----------Admin Products Page--------*/
 	.adminproductstable{
-		font-size: 22px;
+		font-size: 16px;
 	}
 
 /*----------Admin Edit Products Page--------*/
@@ -749,7 +754,7 @@
 
 /*----------Admin Products Page--------*/
 	.adminproductstable{
-		font-size: 18px;
+		font-size: 12px;
 	}
 
 /*----------Admin Edit Products Page--------*/
